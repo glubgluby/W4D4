@@ -1,0 +1,33 @@
+<section class="page"><div class="centered-box">
+    <h2> Oh you got a new album? </h2>
+
+    <form method="post" action="<%= albums_url%>">
+
+        <%= authentic %>
+            <label for="title">Whats it called?</label>
+            <input type="text" name="album[title]" id="title"/>
+            <br>
+            <input type="radio" name="album[live?]" value="false" checked> Studio
+            <input type="radio" name="album[live?]" value="true"> Live
+            <br>
+            <label for="year">What year did it come out?</label>
+            <input type="text" name="album[year]" id="year">
+            <br>
+            <label for="Band">Who made it?</label>
+                <select name="album[band_name]"> 
+
+                    <% Band.all.each do |band| %>
+                        <option name="album[band_name]" 
+                        value="<%=band.id%>" 
+                        <%if band.id == params[:band_id].to_i %> 
+
+                            selected
+                        <%end%>> <%=band.name%>
+                        </option>
+                    <% end %>
+                </select>
+
+            
+        <input type="submit" value="Time for a release party!"/>
+    </form>
+</div></section>

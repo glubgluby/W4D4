@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicProject</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <section>
+    <h1 id="header"> Music Project </h1>
+    <% if logged_in?%>
+      <form id="user_nav" method="POST" action=<%= session_url %> >
+        <%= authentic %>
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Log out">
+      </form>
+    <% else %>
+      <a href="<%= new_session_url %>">Log In</a>
+      <a href="<%= new_user_url %>">Sign up</a>
+    <% end %>
+    <br>
+    <%= render_errors %>
+    <br>
+    <a href="<%= bands_url %>">Home</a>
+    <img src="https://images.all-free-download.com/images/graphicthumb/music_note_and_people_vector_550935.jpg"
+        alt="logo">
+    <section>
+    <br>
+    
+    <%= yield %>
+  </body>
+</html>

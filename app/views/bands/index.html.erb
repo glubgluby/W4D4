@@ -1,0 +1,39 @@
+<h2>The Bands!</h2>
+<style>
+    .bands{
+        font-weight: bold;
+        background-color: orange;
+    }
+    .band {
+        float: none;
+        text-decoration: none;
+        text-decoration-color: antiquewhite;
+        background-color: royalblue;
+        border-radius: 100%;
+        font-family: Georgia, 'Times New Roman', Times, serif
+        font-size: large;
+        color: antiquewhite;
+        padding: 5px;
+        margin: 4px;  
+    }
+    ul > li{
+        list_style: none;
+    }
+
+</style>
+<section class="bands">
+
+<%unless @bands.empty? %>
+    <ul>
+    <% @bands.each do |band| %>
+        <li><a href="<%= band_url(band) %>"><%= band.name %></a></li>
+    <% end %>
+    </ul>
+<% end %>
+</section>
+    <a class ="band" href="<%= new_band_url %>">Add a Band!</a>
+
+
+
+
+    

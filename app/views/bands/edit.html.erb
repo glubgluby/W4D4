@@ -1,0 +1,11 @@
+<section class="page"><div class="centered-box">
+    <h2> Edit Band:</h2>
+
+    <form method="post" action="<%= band_url%>">
+        <%= authentic %>
+        <input type="hidden" name="_method" value="patch"/>
+        <label for="band_name">Type your sick band name!</label>
+            <input type="text" name="band[name]" id="band_name"/>
+        <input type="submit" value="DUUUDE! this name is WAAY cooler!"/>
+    </form>
+</div></section>

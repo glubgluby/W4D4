@@ -1,0 +1,65 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+* {
+    text-align: center;
+    list-style: none;
+}
+input{
+    text-align: start
+}
+
+h1 {
+    float: left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h1.bandname{
+    font-size: 56pt;
+    float: none;
+    text-align: center;
+    text-decoration: underline overline;
+    font-weight: bolder
+}
+section > a {
+    float: right;
+    text-decoration: none;
+    text-decoration-color: antiquewhite;
+    background-color: royalblue;
+    border-radius: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif
+    font-size: large;
+    color: antiquewhite;
+    padding: 5px;
+    margin: 4px;   
+}
+input[type=submit]{
+    text-decoration: none;
+    text-decoration-color: antiquewhite;
+    background-color: royalblue;
+    border-radius: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif
+    font-size: large;
+    color: antiquewhite;
+    padding: 5px;
+    margin: 4px;   
+}
+
+input[type=submit]:hover{
+    filter: brightness(40%);
+    cursor: pointer;
+}
+a:hover{
+    filter: brightness(40%);
+}
